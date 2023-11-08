@@ -1,0 +1,14 @@
+<button
+  mat-button
+  [disabled]="isViewerDisabled"
+>
+   <span [ngClass]="{ 'disabled-cursor': isViewerDisabled }"
+         [style.pointer-events]="'all'"
+         [matTooltip]="isViewerDisabled ? viewerTooltip : '' "
+         matTooltipPosition="below"
+         matTooltipShowDelay="100"
+         matTooltipHideDelay="100"
+         [matTooltipDisabled]="!isViewerDisabled">
+     Click me
+   </span>
+</button>
